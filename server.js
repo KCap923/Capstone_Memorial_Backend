@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000;
 const cors = require('cors')
 
 // Requiring example router
-const userRouter = require('./routes/comments.js');
+const commentRouter = require('./routes/comments.js');
 
 // Configuring the server to accept and parse JSON data.
 app.use(express.json());
@@ -25,8 +25,8 @@ app.use((req, res, next) => {
 });
 
 // Connecting the router to the server
-app.use('/comment', userRouter);
-app.use('/', userRouter);
+app.use('/comments', commentRouter);
+app.use('/', commentRouter);
 
 // Error Handling Middlware
 app.use((err, req, res, next) => {
