@@ -6,11 +6,17 @@ const express = require('express');
 const app = express();
 // Port in which the server will run on
 const PORT = process.env.PORT || 8000;
+
+// Cors Middleware Allows Other Servers To Communicate ** Don't Forget to add app.use(cors()); As shown on line 19!!!!!!!!!!!!!!!!!!!!
+const cors = require('cors')
+
 // Requiring example router
-const userRouter = require('./routes/users.js');
+const userRouter = require('./routes/comments.js');
 
 // Configuring the server to accept and parse JSON data.
 app.use(express.json());
+
+app.use(cors());
 
 //Custom Middlware
 app.use((req, res, next) => {
@@ -19,7 +25,8 @@ app.use((req, res, next) => {
 });
 
 // Connecting the router to the server
-app.use('/users', userRouter);
+app.use('/comment', userRouter);
+app.use('/', userRouter);
 
 // Error Handling Middlware
 app.use((err, req, res, next) => {
