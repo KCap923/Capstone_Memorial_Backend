@@ -5,15 +5,15 @@ const commentsCtrl = require('../controllers/comments.js');
 const router = Router(); 
 
 // Create a comment
-router.post('/', commentsCtrl.createComment);
+router.post('/', commentsCtrl.create);
 
 // Get all comments
-router.get('/', commentsCtrl.getComment);
+router.get('/', commentsCtrl.index);
 
 // Update a comment
-router.patch('/', commentsCtrl.updateComment)
+router.patch('/', commentsCtrl.update)
 
 // Delete a comment 
-router.delete('/:id', commentsCtrl.destroyComment);
+router.delete('/:id', commentsCtrl.destroy);
 
 module.exports = router;
