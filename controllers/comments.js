@@ -29,7 +29,7 @@ if (createdComment){
     res.status(200).json(createdComment);
 }
   } catch (err) {
-    res.status(400).send('No Beuno:(');
+    res.status(400).send(err);
   }
 }
 
@@ -41,7 +41,7 @@ if (updatedComment){
     res.status(200).json(updatedComment);
 }
   } catch (err) {
-    res.status(400).send('No Beuno:(');
+    res.status(400).send(err);
   }
 }
 
@@ -54,7 +54,7 @@ if (deletedComment){
     res.status(200).json(deletedComment);
 }
   } catch (err) {
-    res.status(400).send('No Beuno:(');
+    res.status(400).send(err);
   }
 }
 
