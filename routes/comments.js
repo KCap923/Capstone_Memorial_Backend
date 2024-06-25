@@ -1,9 +1,8 @@
 const { Router } = require('express');
 const commentsCtrl = require('../controllers/comments.js');
-const router = Router(); 
 
 // Grab Controller Functions
-const {index, create, update, destroy } = require("../controllers/comments.js")
+const router = Router(); 
 
 // Create a comment
 router.post('/', commentsCtrl.createComment);
