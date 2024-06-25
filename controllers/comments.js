@@ -16,7 +16,7 @@ if (comments){
     res.status(200).json(comments);
 }
   } catch (err) {
-    res.status(400).send('No Beuno:(');
+    res.status(400).send(err);
   }
 }
 
