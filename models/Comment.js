@@ -11,7 +11,7 @@ const commentsSchema = new Schema(
   relationship: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
 comment: {
     type: String,
