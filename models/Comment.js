@@ -6,7 +6,7 @@ const commentsSchema = new Schema(
   name: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
   relationship: {
     type: String,
@@ -16,12 +16,12 @@ const commentsSchema = new Schema(
 comment: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
 },
 date: {
   type: String,
   required: true,
-  unique: true,
+  unique: false,
 },
 },
 {
